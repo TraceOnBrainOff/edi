@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<films>
+    <film>
+        <title>Martian</title>
+        <genre type="main">Sci-Fi</genre>
+        <year>2015</year>
+        <personal_rating>10/10</personal_rating>
+        <director>Ridley Scott</director>
+        <actors type="lead">Matt Damon, Jessica Chastain, Chiwetel Ejiofor</actors>
+    </film>
+    <film>
+        <title>Cube</title>
+        <genre type="main">Mystery</genre>
+        <year>1997</year>
+        <personal_rating>7/10</personal_rating>
+        <director>Vincenzo Natali</director>
+        <actors type="lead">Nicole De Boer, Maurice Dean Wint, David Hewlett</actors>
+    </film>
+    <film>
+        <title>Birdemic</title>
+        <genre type="main">Mystery</genre>
+        <year>2008</year>
+        <personal_rating>9/10 (So bad that it's good)</personal_rating>
+        <director>James Nguyen</director>
+        <actors type="lead">Whitney Moore, Alan Bagh, Tippi Hedren</actors>
+    </film>
+    <film>
+        <title>Autopsy of Jane Doe</title>
+        <genre type="main">Thriller</genre>
+        <year>2016</year>
+        <personal_rating>8/10</personal_rating>
+        <director>André Øvredal</director>
+        <actors type="lead">Emile Hirsch, Brian Cox, Olven Kelly</actors>
+    </film>
+    <film>
+        <title>Cube 2</title>
+        <genre type="main">Sci-Fi</genre>
+        <year>2003</year>
+        <personal_rating>6/10</personal_rating>
+        <director>Andrzej Sekuła</director>
+        <actors type="lead">Kari Matchett, Grace Lynn Kung, Neil Crone</actors>
+    </film>
+</films>
