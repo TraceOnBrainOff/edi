@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create DOM elements</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h3 onmouseover="mouseOver()" onmouseout="mouseOut()">Sticks and stones may break my bones, but words will never harm me.</h3>
+		<script>
+			var eng = "Sticks and stones may break my bones, but words will never harm me."
+			var pl = "Kije i kamienie kości mi połamią, ale twoje słowa nigdy mnie nie zranią"
+			var e = document.querySelector("h3")
+			function mouseOver() {
+				e.textContent = pl
+			}
+			function mouseOut() {
+				e.textContent = eng
+			}
+			// a JavaScript code here ...
+			
+			// Translation:
+			// Kije i kamienie kości mi połamią, ale twoje słowa nigdy mnie nie zranią
+			
+		</script>
+	</body>
+</html>

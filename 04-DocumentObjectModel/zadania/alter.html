@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pink Floyd</title>
+		<meta charset="UTF-8">
+	</head>
+	<body ondblclick = "yellowBody()">
+		<h1 onclick = "addPart2()">Another Brick in the Wall</h1>
+		<h3 onclick = "bandDesc()">Pink Floyd</h3>
+		<p onclick = "italicsText(this)" oncopy="copyrightAlert()">We don't need no education<br>
+		We don't need no thought control<br>
+		No dark sarcasm in the classroom<br>
+		Teachers leave them kids alone<br>
+		Hey! Teachers! Leave them kids alone<br>
+		All in all it's just another brick in the wall<br>
+		All in all you're just another brick in the wall</p>
+		
+		<p style="visibility: hidden;" onclick = "createImg()">Pink Floyd were an English rock band formed in London.<br>
+		They achieved international acclaim with their progressive<br>
+		and psychedelic music.</p>
+		
+		<script>
+			
+			var hasBeenAdded = false
+			function addPart2() {
+				var e = document.querySelector('h1')
+				if (hasBeenAdded == false) {
+					e.textContent += " (Part 2)"
+					hasBeenAdded = true
+				}
+			}
+			isBandVisible = false
+			function bandDesc() {
+				if (isBandVisible == false) {
+					var e = document.getElementsByTagName('p')[1]
+					e.removeAttribute('style')
+					isBandVisible = true
+				}
+			}
+			isItalics = false
+			function italicsText(a) {
+				if (isItalics == false){
+					a.innerHTML = a.innerHTML.italics()
+					isItalics = true
+				}
+			}
+			function yellowBody() {
+				document.body.style.backgroundColor = "yellow";
+			}
+			function copyrightAlert() {
+				alert("Copyright warning")
+			}
+			imageExists = false
+			function createImg() {
+				if (imageExists == false && isBandVisible == true) {
+					var bd = document.querySelector('body')
+					imageExists = true
+					var newImg = document.createElement("img")
+					newImg.setAttribute('src', "https://upload.wikimedia.org/wikipedia/en/d/d6/Pink_Floyd_-_all_members.jpg")
+					bd.appendChild(newImg)
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Fill in a form</title>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<h1>Filling in a form</h1>
+	<form>
+		<p>University:<br><input type="text" name="inputUni"></p>
+		<p>Address:<br><input type="text" name="inputAddress"></p>
+		<button type="button" onclick="hintButton()">Hint</button>
+	</form>
+
+	<script>
+		// a JavaScript code here ...
+		var university = "Cracow University of Economics";
+		var address = "Rakowicka 27, Krakow, POLAND";
+		function hintButton() {
+			var e1 = document.getElementsByName("inputUni")[0]
+			var e2 = document.getElementsByName("inputAddress")[0]
+			e1.value = university
+			e2.value = address
+		}
+
+	</script>
+</body>
+
+</html>
