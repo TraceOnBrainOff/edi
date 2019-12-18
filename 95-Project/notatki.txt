@@ -1,0 +1,11 @@
+Wymagane moduły:
+    Bootstrap 4
+    CSS -- jesli potrzeba
+    jQuery
+
+Użyć zarządzania projektem na githubie: https://github.com/features/project-management/
+Mają być conajmniej 2 wykresy na stronie
+Mają zostać użyte conajmniej dwie strony do pobrania danych
+
+Nie stosować dodatkowych bibliotek lub frameworków oprócz tych podanych!!!
+
