@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exchange rates</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Exchange rates</h1>
+		<p>Open a console and then click the button</p>
+		<input type="button" value="Get exchange rates" onclick="bttnpress()">
+		<p id="exRate"></p>
+		
+		<script>
+			function bttnpress(){
+				var currencies = ["EUR", "GBP", "USD"]
+				var st = ""
+				for (i=0; i<currencies.length; i++) {
+					var method = 'GET';
+					var URL = 'http://api.nbp.pl/api/exchangerates/rates/C/'+currencies[i]+'?format=JSON';
+					var xhr = new XMLHttpRequest();
+					xhr.onreadystatechange = function(st){
+						if (this.readyState ==4 && this.status ==200){
+							var aaa = JSON.parse(this.response)
+							console.log(aaa)
+							
+						}
+					};
+					xhr.open(method, URL);
+					xhr.send();
+				}
+			}
+			
+		</script>
+
+	</body>
+</html>

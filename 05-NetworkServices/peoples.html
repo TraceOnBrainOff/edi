@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>People</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>People</h1>
+		<p>Click the button</p>
+		<input type="button" value="Display people's data" onclick="bttnpress()">
+		<p id="personalData"></p>
+		
+		<script>
+			function bttnpress(){
+				var aaa = document.getElementById("personalData")
+				aaa.setAttribute('style', 'white-space: pre;');
+				var method = 'GET';
+				var URL = 'people.json';
+				var xhr = new XMLHttpRequest();
+				xhr.onreadystatechange = function(){
+					if (this.readyState ==4 && this.status ==200){
+						var db = JSON.parse(this.response)
+						for (i=0; i<db.length;i++) {
+							var currRow = db[i]
+							var personalData = document.getElementById("personalData")
+							personalData.textContent += (i+1) + ". "+ currRow.name + " " + currRow.surname.toUpperCase() + ", " + currRow.country
+							personalData.textContent += "\r\n"
+						}
+					}
+				};
+				xhr.open(method, URL);
+				xhr.send();
+			}
+			
+		</script>
+
+	</body>
+</html>

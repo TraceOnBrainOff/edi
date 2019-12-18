@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>people</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+		<script src = "//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	</head>
+	<body>
+		<h1>people</h1>
+		<p>Open a console and then click the button</p>
+		<input type="button" value="Display people's data" onclick="bttnpress()">
+		<p id="personalData"></p>
+		
+		<script>
+			$(document).ready( function () {
+    			$('#myTable').DataTable();
+			} );
+			
+		</script>
+
+	</body>
+</html>
